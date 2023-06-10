@@ -1,11 +1,17 @@
+import Link from "next/link";
 import React from "react";
 
-const NavElements = () => {
-  const navList = ["Dashboard", "My Tasks", "Reporting", "Portfolios", "Goals"];
+const NavElements = ({ navList }) => {
   return (
     <ul className="flex w-full justify-center gap-3 items-center list-none">
       {navList?.map((redirect) => (
-        <li className="font-bold capitalize">{redirect}</li>
+        <Link
+          href={"#"}
+          key={redirect}
+          className="font-semibold text-sm capitalize"
+        >
+          {redirect}
+        </Link>
       ))}
     </ul>
   );

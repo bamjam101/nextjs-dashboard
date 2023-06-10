@@ -1,5 +1,16 @@
 "use client";
 
+import Header from "@components/Header";
+import TasksGrid from "@components/TasksGrid";
+import { useState } from "react";
+
 export default function Home() {
-  return <main className="">Home</main>;
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isMediumScreenDevice, setIsMediumScreenDevice] = useState(false);
+  return (
+    <main>
+      <Header />
+      <TasksGrid />
+    </main>
+  );
 }

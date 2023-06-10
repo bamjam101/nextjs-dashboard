@@ -3,23 +3,24 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Icon = ({ size, url, explicit }) => {
-  const [span, setSpan] = useState("25%");
+  const [span, setSpan] = useState(14);
+  console.log(span);
   useEffect(() => {
     if (size === "md") {
-      setSpan("50%");
+      setSpan(18);
     } else if (size === "lg") {
-      setSpan("75%");
+      setSpan(24);
     } else if (size === "xl") {
-      setSpan("100%");
+      setSpan(36);
     }
-  }, []);
+  }, [size]);
   return (
     <Image
-      href={url}
+      src={`/${url}`}
       alt={url?.split(".")[0]}
       height={span}
       width={span}
-      className={explicit}
+      className={`cursor-pointer ${explicit ? explicit : "undefined"}`}
     ></Image>
   );
 };
