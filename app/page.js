@@ -1,3 +1,5 @@
+"use client";
+
 export default function Home() {
-  return <main className="">Hi</main>;
+  return <main className="">Home</main>;
 }

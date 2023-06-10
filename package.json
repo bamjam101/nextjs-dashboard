@@ -1,7 +1,11 @@
 {
   "name": "nextjs-dashboard",
   "version": "0.1.0",
-  "private": true,
+  "description": "A template dashboard repository to quick start with development requiring a dashboard interface",
+  "main": "index.js",
+  "repository": "https://github.com/bamjam101/nextjs-dashboard.git",
+  "author": "bamjam101 <herejamil123@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
