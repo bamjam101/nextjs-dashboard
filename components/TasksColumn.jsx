@@ -1,4 +1,3 @@
-import React from "react";
 import TasksColumnHeader from "./TasksColumnHeader";
 import TasksColumnContent from "./TasksColumnContent";
 

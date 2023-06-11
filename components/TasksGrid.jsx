@@ -1,4 +1,3 @@
-import React from "react";
 import TasksColumn from "./TasksColumn";
 
 const TasksGrid = () => {

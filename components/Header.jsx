@@ -1,6 +1,3 @@
-import React from "react";
-import SearchBar from "./SearchBar";
-
 import Navbar from "./Navbar";
 import SectionHeader from "./SectionHeader";
 import SectionAction from "./SectionAction";
