@@ -8,7 +8,9 @@ const IconButton = ({ explicit, url, size, buttonText }) => {
     >
       <Icon url={url} size={size} />
       {buttonText && (
-        <span className="text-sm font-bold capitalize">{buttonText}</span>
+        <span className="text-sm font-bold hidden capitalize md:block">
+          {buttonText}
+        </span>
       )}
     </section>
   );

@@ -6,7 +6,7 @@ import Icon from "./Icon";
 
 const SectionAction = () => {
   return (
-    <section className="px-8 flex justify-between py-4">
+    <section className="px-8 hidden lg:flex justify-between py-4">
       <section className="flex border-r-1 gap-1 border-gray-200 pr-4">
         <IconButton
           explicit={"bg-white"}
@@ -30,14 +30,18 @@ const SectionAction = () => {
         <Icon size={"md"} url={"drop.svg"} />
       </section>
       <section className="flex items-center gap-1 px-2">
-        <span className="font-semibold">Owners</span>
+        <span className="font-semibold text-xs sm:text-sm md:text-base">
+          Owners
+        </span>
         <IconButton
           url={"twitter.svg"}
-          size={"md"}
+          size={"xl"}
           buttonText={"Twitter Team"}
         />
       </section>
-      <SearchBar exitDisabled={true} />
+      <div className="hidden lg:block">
+        <SearchBar exitDisabled={true} />
+      </div>
       <SectionHeaderIconList />
     </section>
   );

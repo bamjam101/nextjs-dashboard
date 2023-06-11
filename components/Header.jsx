@@ -8,7 +8,10 @@ import SectionAction from "./SectionAction";
 const Header = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
     <header className={`flex flex-col`}>
-      <Navbar />
+      <Navbar
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+      />
       <SectionHeader />
       <SectionAction />
     </header>

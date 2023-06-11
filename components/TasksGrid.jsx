@@ -1,7 +1,7 @@
 import React from "react";
 import TasksColumn from "./TasksColumn";
 
-const TasksGrid = ({ isSidebarOpen, setIsSidebarOpen }) => {
+const TasksGrid = () => {
   const backlogTasksData = [
     {
       title: "Model Answer",
@@ -206,7 +206,9 @@ const TasksGrid = ({ isSidebarOpen, setIsSidebarOpen }) => {
     },
   ];
   return (
-    <section className={`px-8 w-full grid grid-cols-4 py-4 gap-8`}>
+    <section
+      className={`px-8 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-4 gap-8`}
+    >
       <TasksColumn header={"Backlog Tasks"} data={backlogTasksData} />
       <TasksColumn header={"To Do Tasks"} data={todoTasksData} />
       <TasksColumn header={"In Progress"} data={inProgressTasksData} />

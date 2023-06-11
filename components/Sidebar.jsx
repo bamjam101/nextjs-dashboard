@@ -97,11 +97,15 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
     <section
       className={`transition-all duration-300 border-r-2 border-black/10 ${
-        isSidebarOpen ? "w-[18%]" : "w-[5%]"
+        isSidebarOpen
+          ? "w-screen md:w-[18%] translate-x-0"
+          : "w-0 -translate-x-48"
       }`}
     >
       <header className="flex justify-between items-center min-h-[4rem] px-8 transition-all border-b-2 border-black/10">
-        <h1 className="text-lg font-bold capitalize">Dashboard</h1>
+        <h1 className="text-xs sm:text-sm md:text-base lg:text-md xl:text-lg font-bold capitalize">
+          Dashboard
+        </h1>
         <figure
           onClick={() => setIsSidebarOpen(isSidebarOpen ? false : true)}
           className="grid place-items-center cursor-pointer"

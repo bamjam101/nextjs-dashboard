@@ -6,7 +6,7 @@ import UserList from "./UserList";
 const SectionHeader = () => {
   return (
     <section className="flex pt-8 pb-4 px-8">
-      <h2 className="flex gap-10 w-full justify-start items-center text-3xl font-bold capitalize">
+      <h2 className="flex gap-10 w-full justify-start items-center text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold capitalize">
         Task Boards <Icon url={"edit.svg"} size={"md"} />
       </h2>
       <NavElements
