@@ -206,7 +206,7 @@ const TasksGrid = () => {
   ];
   return (
     <section
-      className={`px-8 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-4 gap-8`}
+      className={`px-8 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-8 gap-6`}
     >
       <TasksColumn header={"Backlog Tasks"} data={backlogTasksData} />
       <TasksColumn header={"To Do Tasks"} data={todoTasksData} />

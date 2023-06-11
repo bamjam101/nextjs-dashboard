@@ -1,13 +1,13 @@
 import Icon from "./Icon";
 
-const IconButton = ({ explicit, url, size, buttonText }) => {
+const IconButton = ({ explicit, url, size, buttonText, iconExplicit }) => {
   return (
     <section
-      className={`cursor-pointer ${explicit} flex justify-center items-center px-4 py-2 rounded-lg gap-2`}
+      className={`cursor-pointer ${explicit} flex justify-center items-center px-5 py-1 gap-2`}
     >
-      <Icon url={url} size={size} />
+      <Icon url={url} size={size} explicit={iconExplicit} />
       {buttonText && (
-        <span className="text-sm font-bold hidden capitalize md:block">
+        <span className="text-xs font-bold hidden capitalize md:block">
           {buttonText}
         </span>
       )}

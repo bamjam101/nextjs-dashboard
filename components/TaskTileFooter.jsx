@@ -8,16 +8,28 @@ const TaskTileFooter = ({ userList, comments, pinned }) => {
         {userList?.length && <UserList showCount={2} users={userList} />}
       </div>
       <div className="flex gap-3">
-        <div className="flex gap-1 flex-grow">
+        <div className="flex gap-1 justify-center items-center">
           <Icon url={pinned[0] ? "pin-purple.svg" : "pin.svg"} size={"md"} />
-          <p className="text-sm text-gray">{pinned[1]}</p>
+          <p
+            className={`${
+              pinned[0] ? "text-purple" : "text-gray"
+            } text-xs font-bold`}
+          >
+            {pinned[1]}
+          </p>
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-1 justify-center items-center">
           <Icon
             url={comments[0] ? "comment-yellow.svg" : "comment.svg"}
             size={"md"}
           />
-          <p className="text-sm text-gray">{comments[1]}</p>
+          <p
+            className={`${
+              comments[0] ? "text-yellow" : "text-gray"
+            } text-xs font-bold`}
+          >
+            {comments[1]}
+          </p>
         </div>
       </div>
     </section>

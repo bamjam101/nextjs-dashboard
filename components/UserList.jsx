@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Icon from "./Icon";
 
 const UserList = ({ users, placement, showCount }) => {
@@ -6,7 +8,12 @@ const UserList = ({ users, placement, showCount }) => {
       {users?.map((user, index) => {
         if (index < parseInt(showCount)) {
           return (
-            <figure key={index} className="grid place-items-center">
+            <figure
+              key={index}
+              className={`grid p-[2px] bg-white rounded-full place-items-center ${
+                index > 0 ? "-translate-x-4" : undefined
+              }`}
+            >
               <Icon
                 url={user}
                 size={"xl"}
@@ -16,17 +23,17 @@ const UserList = ({ users, placement, showCount }) => {
           );
         }
       })}
-      {users?.length > 1 && (
-        <span className="h-9 w-9 rounded-full text-xs font-semibold bg-gray-light flex justify-center items-center ">
+      {users?.length > 2 && (
+        <span className="h-9 w-9 rounded-full text-xs font-semibold bg-gray-light flex justify-center items-center -translate-x-7">
           +{users.length - showCount}
         </span>
       )}
       <Icon
         url={"add.svg"}
         size={"xl"}
-        explicit={
-          "p-2 ml-2 rounded-full border-2 border-dotted border-gray-light"
-        }
+        explicit={`p-2 ml-2 rounded-full border-[2px] border-dotted border-gray-lighter ${
+          users?.length > 2 ? "-translate-x-7" : "translate-x-0"
+        }`}
       />
     </section>
   );

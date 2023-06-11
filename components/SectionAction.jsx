@@ -6,44 +6,45 @@ import Icon from "./Icon";
 
 const SectionAction = () => {
   return (
-    <section className="px-8 hidden lg:flex justify-between py-4">
-      <section className="flex border-r-1 gap-1 border-gray-200 pr-4">
+    <article className="px-8 hidden lg:flex text-black-light justify-between py-4">
+      <section className="flex border-r-[1px] gap-[1px] border-gray/10 pr-6">
         <IconButton
-          explicit={"bg-white"}
+          explicit={"bg-white rounded-l-lg shadow-sm"}
           url={"grid.svg"}
-          size={"md"}
+          size={"sm"}
           buttonText={"Board View"}
         />
         <IconButton
-          explicit={"bg-white"}
+          explicit={"bg-white rounded-r-lg shadow-sm"}
           url={"list.svg"}
           size={"md"}
           buttonText={"List View"}
         />
       </section>
-      <section className="flex border-r-1 gap-1 border-gray-200 px-4">
+      <section className="flex border-r-[1px] gap-1 border-gray/10 pr-3">
         <IconButton
           url={"lock.svg"}
           size={"md"}
           buttonText={"Limited Access"}
         />
-        <Icon size={"md"} url={"drop.svg"} />
+        <figure className="grid place-items-center">
+          <Icon size={"md"} url={"drop.svg"} />
+        </figure>
       </section>
       <section className="flex items-center gap-1 px-2">
-        <span className="font-semibold text-xs sm:text-sm md:text-base">
-          Owners
-        </span>
+        <span className="font-semibold text-xs">Owners</span>
         <IconButton
           url={"twitter.svg"}
-          size={"xl"}
+          size={"sm"}
           buttonText={"Twitter Team"}
+          iconExplicit={"p-2 shadow-sm rounded-full bg-white"}
         />
       </section>
-      <div className="hidden lg:block">
+      <section className="hidden lg:block pr-auto">
         <SearchBar exitDisabled={true} />
-      </div>
+      </section>
       <SectionHeaderIconList />
-    </section>
+    </article>
   );
 };
 

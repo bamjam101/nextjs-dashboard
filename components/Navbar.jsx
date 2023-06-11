@@ -4,7 +4,7 @@ import Icon from "./Icon";
 
 const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
-    <nav className="w-full flex px-8 border-b-2 border-black/10 min-h-[4rem]">
+    <nav className="w-full flex px-8 border-b-[1px] border-gray/10 min-h-[5.5rem]">
       <div className={`w-full flex items-center gap-10`}>
         {!isSidebarOpen && (
           <figure

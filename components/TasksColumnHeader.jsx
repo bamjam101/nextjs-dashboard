@@ -15,7 +15,7 @@ const TasksColumnHeader = ({ columnHeader, taskCount }) => {
   }, []);
   return (
     <header className="flex justify-between">
-      <h3 className="flex gap-4 font-bold">
+      <h3 className="flex gap-4 text-sm font-bold">
         {columnHeader}{" "}
         <span
           className={`h-5 w-5 flex justify-center items-center text-sm rounded-full ${colorTheme}`}
