@@ -1,31 +1,34 @@
 import React from "react";
 import Icon from "./Icon";
 
-const UserList = () => {
+const UserList = ({ users }) => {
   return (
-    <section className="w-full flex justify-end items-center">
+    <section className="w-full flex justify-start items-center">
+      {users?.map((user, index) => {
+        if (index < 2) {
+          return (
+            <figure key={index} className="grid place-items-center">
+              <Icon
+                url={user}
+                size={"xl"}
+                explicit={"rounded-full p-[2px] bg-white"}
+              />
+            </figure>
+          );
+        }
+      })}
+      {users?.length > 1 && (
+        <span className="h-9 w-9 rounded-full text-xs font-semibold bg-gray-light flex justify-center items-center ">
+          +{users.length - 2}
+        </span>
+      )}
       <Icon
-        url={"user.svg"}
-        size={"lg"}
-        explicit={"rounded-full p-[2px] bg-white"}
+        url={"add.svg"}
+        size={"xl"}
+        explicit={
+          "p-2 ml-2 rounded-full border-2 border-dotted border-gray-light"
+        }
       />
-      <Icon
-        url={"user.svg"}
-        size={"lg"}
-        explicit={"rounded-full p-[2px] bg-white"}
-      />
-      <Icon
-        url={"user.svg"}
-        size={"lg"}
-        explicit={"rounded-full p-[2px] bg-white"}
-      />
-      <div className="ml-2">
-        <Icon
-          url={"add.svg"}
-          size={"xl"}
-          explicit={"p-[3px] bg-white rounded-full border-3px"}
-        />
-      </div>
     </section>
   );
 };

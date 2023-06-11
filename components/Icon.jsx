@@ -3,8 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Icon = ({ size, url, explicit }) => {
-  const [span, setSpan] = useState(14);
-  console.log(span);
+  const [span, setSpan] = useState(0);
   useEffect(() => {
     if (size === "md") {
       setSpan(18);
@@ -12,6 +11,8 @@ const Icon = ({ size, url, explicit }) => {
       setSpan(24);
     } else if (size === "xl") {
       setSpan(36);
+    } else {
+      setSpan(14);
     }
   }, [size]);
   return (

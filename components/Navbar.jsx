@@ -5,7 +5,7 @@ import Icon from "./Icon";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex py-4 border-b-2 border-gray-200">
+    <nav className="w-full flex py-4 border-b-2 border-black/10">
       <div className="w-full flex items-center gap-10">
         <SearchBar />
         <Icon url={"mic.png"} size={"sm"} />
