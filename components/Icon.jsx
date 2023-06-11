@@ -21,7 +21,9 @@ const Icon = ({ size, url, explicit }) => {
       alt={url?.split(".")[0]}
       height={span}
       width={span}
-      className={`cursor-pointer ${explicit ? explicit : "undefined"}`}
+      className={`cursor-pointer w-auto h-auto ${
+        explicit ? explicit : "undefined"
+      }`}
     ></Image>
   );
 };

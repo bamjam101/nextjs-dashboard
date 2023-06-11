@@ -3,7 +3,7 @@ import React from "react";
 
 const NavElements = ({ navList }) => {
   return (
-    <ul className="flex w-full justify-center gap-3 items-center list-none">
+    <ul className="flex w-full justify-center gap-3 text-gray items-center list-none">
       {navList?.map((redirect) => (
         <Link
           href={"#"}

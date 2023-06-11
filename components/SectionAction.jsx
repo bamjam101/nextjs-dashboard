@@ -6,8 +6,8 @@ import Icon from "./Icon";
 
 const SectionAction = () => {
   return (
-    <section className=" flex justify-between py-4">
-      <section className="flex border-r-1 gap-3 border-gray-200 pr-4">
+    <section className="px-8 flex justify-between py-4">
+      <section className="flex border-r-1 gap-1 border-gray-200 pr-4">
         <IconButton
           explicit={"bg-white"}
           url={"grid.svg"}
@@ -21,7 +21,7 @@ const SectionAction = () => {
           buttonText={"List View"}
         />
       </section>
-      <section className="flex border-r-1 gap-3 border-gray-200 px-4">
+      <section className="flex border-r-1 gap-1 border-gray-200 px-4">
         <IconButton
           url={"lock.svg"}
           size={"md"}
@@ -29,7 +29,7 @@ const SectionAction = () => {
         />
         <Icon size={"md"} url={"drop.svg"} />
       </section>
-      <section className="flex items-center gap-2 px-2">
+      <section className="flex items-center gap-1 px-2">
         <span className="font-semibold">Owners</span>
         <IconButton
           url={"twitter.svg"}

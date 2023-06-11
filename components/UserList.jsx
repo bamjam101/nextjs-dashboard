@@ -1,11 +1,11 @@
 import React from "react";
 import Icon from "./Icon";
 
-const UserList = ({ users }) => {
+const UserList = ({ users, placement, showCount }) => {
   return (
-    <section className="w-full flex justify-start items-center">
+    <section className={`w-full flex items-center ${placement}`}>
       {users?.map((user, index) => {
-        if (index < 2) {
+        if (index < parseInt(showCount)) {
           return (
             <figure key={index} className="grid place-items-center">
               <Icon
@@ -19,7 +19,7 @@ const UserList = ({ users }) => {
       })}
       {users?.length > 1 && (
         <span className="h-9 w-9 rounded-full text-xs font-semibold bg-gray-light flex justify-center items-center ">
-          +{users.length - 2}
+          +{users.length - showCount}
         </span>
       )}
       <Icon

@@ -5,9 +5,9 @@ import Navbar from "./Navbar";
 import SectionHeader from "./SectionHeader";
 import SectionAction from "./SectionAction";
 
-const Header = () => {
+const Header = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
-    <header className="w-full flex flex-col px-8">
+    <header className={`flex flex-col`}>
       <Navbar />
       <SectionHeader />
       <SectionAction />

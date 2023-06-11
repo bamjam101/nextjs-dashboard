@@ -17,7 +17,7 @@ const TasksColumnHeader = ({ columnHeader, taskCount }) => {
       <h3 className="flex gap-4 font-bold">
         {columnHeader}{" "}
         <span
-          className={`block h-6 w-6 text-center text-sm rounded-full ${colorTheme}`}
+          className={`h-5 w-5 flex justify-center items-center text-sm rounded-full ${colorTheme}`}
         >
           {taskCount}
         </span>

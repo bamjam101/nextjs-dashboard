@@ -3,13 +3,22 @@
 @tailwind utilities;
 
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #F7F8FA;
+}
+
 body::-webkit-scrollbar {
   width: 0.75em;
   outline: none;
 }
 
 body::-webkit-scrollbar-track {
-  background: #070812;
+  background: #F7F8FA;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -18,5 +27,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #4d547d;
+  background: #2c314e;
 }

@@ -5,14 +5,27 @@ import UserList from "./UserList";
 
 const SectionHeader = () => {
   return (
-    <section className="flex pt-8 pb-4">
-      <h2 className="flex gap-10 w-full justify-start items-baseline text-3xl font-bold capitalize">
+    <section className="flex pt-8 pb-4 px-8">
+      <h2 className="flex gap-10 w-full justify-start items-center text-3xl font-bold capitalize">
         Task Boards <Icon url={"edit.svg"} size={"md"} />
       </h2>
       <NavElements
         navList={["Timeline", "Calendar", "Dashboard", "Progress", "More"]}
       />
-      <UserList />
+      <UserList
+        placement={"justify-end"}
+        showCount={"5"}
+        users={[
+          "user.svg",
+          "user.svg",
+          "user.svg",
+          "user.svg",
+          "user.svg",
+          "user.svg",
+          "user.svg",
+          "user.svg",
+        ]}
+      />
     </section>
   );
 };
